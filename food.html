@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        a{
+            text-decoration: none;
+            color:white;
+        }
+        #totle{
+            background-color:#4682B4;
+            height: 3000px;
+        }
+        
+        #all{
+            background-image:url(image-food/pic5.jpg);
+            height: 2860px;
+            width: 1230px;
+            box-shadow:10px 10px 5px #696969 ;
+            position: relative;
+            top:70px;
+            left: 137px;
+        }
+        #nav{
+            height: 65px;
+            width: 1230px;
+            position: fixed;
+            top:0;
+            background-color:#4682B4  ;
+            border-bottom:5px solid peru;
+            z-index: 99;
+        }
+        #nav li{
+            float:left;
+            margin-left: 30px;
+            margin-right:30px;
+            list-style-type: none;
+            font-size:30px;
+            line-height: 65px;
+            color:white  ;
+        }
+        #word{
+            width: 300px;
+            height: 400px;
+        }
+        #word #treat{
+            font-size: 80px;
+            color:peru;
+            position:absolute;
+            left:100px;
+            top:160px;
+        }
+        #word #you{
+            font-size: 80px;
+            color:peru;
+            position:absolute;
+            left:100px;
+            top:300px;
+        }
+        #you div{
+            float:left;
+            margin-right: 60px;
+        }
+        #word #best{
+            font-size: 80px;
+            color:peru;
+            position:absolute;
+            left:100px;
+            top:460px;
+        }
+        #best div{
+            float:left;
+            margin-right: 60px;
+        }
+        #pic{
+            width: 600px;
+            height: 600px;
+            position:absolute;
+            top:25px;
+            right: 0;
+        }
+        #box{
+            
+            height: 50px;
+            width: 290px;
+            background-image: url(image-food/pic5.jpg) ;
+            position:absolute;
+            top:0;
+            right: 0;
+        }
+        #lbtn{
+            float: left;
+            margin-left: 50px;
+            margin-top: 7px;
+            font-size: 25px;
+            background-color: peru;
+        }
+        #box1{
+            width: 300px;
+            height:170px;
+            border:2px solid grey;
+            background-color: peru;
+            position: absolute;
+            top:50px;
+            z-index: 99;
+        }
+        #name{
+            width: 200px;
+            font-size: 18px;
+            margin-top:20px;
+            margin-bottom:30px;
+        }
+        #pass{
+            width: 200px;
+            font-size: 18px;
+            margin-left: 15px;
+        }
+        #lclose{
+            width: 35px;
+            height: 20px;
+            position: absolute;
+            bottom:10px;
+            right: 10px;
+        }
+        #pbtn{
+            float: left;
+            margin-left: 50px;
+            margin-top: 7px;
+            font-size: 25px;
+            background-color: peru;
+        }
+        #box2{
+            width: 300px;
+            height:170px;
+            border:2px solid grey;
+            background-color: peru;
+            position: absolute;
+            top:50px;
+            z-index: 99;
+        }
+        #name2{
+            width: 200px;
+            font-size: 18px;
+            margin-top:20px;
+            margin-bottom:30px;
+            margin-left: 15px;
+        }
+        #pass2{
+            width: 200px;
+            font-size: 18px;
+            
+        }
+        #ensure{
+            width: 79px;
+            height: 30px;
+            position: absolute;
+            bottom:15px;
+            left: 100px;
+        }
+        #pclose{
+            width: 35px;
+            height: 20px;
+            position: absolute;
+            bottom:10px;
+            right: 10px;
+        }
+        #data{
+            width: 300px;
+            height: 70px;
+            font-size: 55px;
+            font-family:cursive;
+            color:peru;
+            position: absolute;
+            top:70px;
+            left: 100px;
+        }
+
+        #foodRec{
+            font-size: 50px;
+            color: peru ;
+            position:absolute;
+            top:730px;
+            left: 30px;
+        }
+        #rec{
+            width: 900px;
+            height: 320px;
+            background-color: #ADD8E6  ;
+            border:8px solid #4682B4 ;
+            border-left: none;
+            position:absolute;
+            top:800px;
+            left:0;
+
+        }
+        #rec img{
+            width: 250px;
+            height: 320px;
+            margin-left: 15px;
+            float: left;
+        }
+        #rec #key1{
+            width: 600px;
+            height: 400px;
+            position:absolute;
+            margin-left: 280px;
+            margin-top:20px;
+            float: left;
+        }
+        #key1 #food1{
+            font-size: 30px;
+            line-height: 70px;
+        }
+        #key1 #text1{
+            font-size: 20px;
+            line-height: 40px;
+        }
+
+        #foodHot{
+            font-size: 50px;
+            color: peru ;
+            position:absolute;
+            top:1250px;
+            right: 30px;
+        }
+        #hot{
+            width: 900px;
+            height: 320px;
+            background-color: #ADD8E6 ;
+            border:8px solid #4682B4 ;
+            border-right: none;
+            position:absolute;
+            top:1325px;
+            right:0;
+
+        }
+        #hot img{
+            width: 250px;
+            height: 320px;
+            margin-right: 15px;
+            float: left;
+        }
+        #hot #key2{
+            width: 600px;
+            height: 400px;
+            position:absolute;
+            margin-left: 270px;
+            margin-top:20px;
+            float: left;
+        }
+        #hot #food2{
+            font-size: 30px;
+            line-height: 70px;
+        }
+        #hot #text2{
+            font-size: 20px;
+            line-height: 40px;
+        }
+        #foundFood{
+            font-size: 50px;
+            color: peru ;
+            position:absolute;
+            top:1830px;
+            left: 60px;
+        }
+        #found1{
+            width: 330px;
+            height: 320px;
+            position: absolute;
+            top:1930px;
+            left:60px;
+            float:left;
+        }
+        #pic3-1{
+            width: 330px;
+            height: 250px;
+            position: absolute;
+            top:0;
+        }
+        #text3-1{
+            width: 320px;
+            height: 50px;
+            font-size: 18px;
+            color:#778899;
+            margin:5px;
+            position: absolute;
+            bottom:5px;
+        }
+        #found2{
+            width: 330px;
+            height: 320px;
+            position: absolute;
+            top:1930px;
+            left:450px;
+            float:left;
+        }
+        #pic3-2{
+            width: 330px;
+            height: 250px;
+            position: absolute;
+            top:0;
+        }
+        #text3-2{
+            width: 320px;
+            height: 50px;
+            font-size: 18px;
+            color:#778899;
+            margin:5px;
+            position: absolute;
+            bottom:5px;
+        }
+        #found3{
+            width: 330px;
+            height: 320px;
+            position: absolute;
+            top:1930px;
+            right: 60px;
+            float:left;
+        }
+        #pic3-3{
+            width: 330px;
+            height: 250px;
+            position: absolute;
+            top:0;
+        }
+        #text3-3{
+            width: 330px;
+            height: 50px;
+            font-size: 18px;
+            color:#778899;
+            margin:5px;
+            position: absolute;
+            bottom:5px;
+        }
+        #shareFood{
+            width: 1000px;
+            height: 400px;
+            position: absolute;
+            bottom:70px;
+            left:50px;
+            /* border: 2px solid black; */
+        }
+        #pic4{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 80px;
+        }
+        #share{
+            font-size: 60px;
+            color:peru;
+            position: absolute;
+            left:430px;
+            top:0;
+        }
+        #text4{
+            font-size: 22px;
+            color:peru;
+            width: 500px;
+            height: 350px;
+            position: absolute;
+            right: 60px;
+            top:100px;
+    
+        }
+        #sharebtn{
+            width: 80px;
+            height: 50px;
+            font-size: 25px;
+            background-color: peru;
+            position: absolute;
+            left:450px;
+            bottom:110px;
+        }
+
+        #back{
+            width: 90px;
+            height: 70px;
+            background-color: peru;
+            position: fixed;
+            bottom:20px;
+            right: 30px;
+        }
+       
+        #fire{
+            font-size: 28px;
+            color:white;
+            width: 300px;
+            height: 30px;
+            position: absolute;
+            top:2950px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="totle">
+        <div id="all">
+
+            <!-- 导航 -->
+            <ul id="nav">
+                <a href="#"><li>各地名吃</li></a>
+                <a href="#"><li>素食</li></a>
+                <a href="#"><li>沙拉</li></a>
+                <a href="#"><li>火锅</li></a>
+                <a href="#"><li>养生</li></a>
+                <a href="#"><li>异域</li></a>
+                <a href="#"><li>麻辣</li></a>
+                <a href="#"><li>清淡</li></a>
+                <a href="#"><li>发现</li></a>
+            </ul>
+
+            <!-- 登录注册 -->
+            <div id="box">
+                <div id="logon">
+                    <button id="lbtn">登录</button>
+                    <div id="box1">
+                        <div>用户名<input type="text" id="name"></div>
+                        <div>密码<input type="text" id="pass"></div>
+                        <button id="lclose">close</button>
+                    </div>
+                </div>
+                <div id="post"> 
+                    <button id="pbtn">注册</button>
+                    <div id="box2">
+                        <div>用户名<input type="text" id="name2"></div>
+                        <div>设置密码<input type="text" id="pass2"></div>
+                        <button id="ensure">确认注册</button>
+                        <button id="pclose">close</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 日期 -->
+            <div id="data"></div>
+            <!-- 文字 -->
+            <div id="word">
+                <div id="treat">Treat</div>
+                <div id="you">
+                    <div>yourself</div>
+                    <div>to</div>
+                </div>
+                <div id="best">
+                    <div>the</div>
+                    <div>best !</div>
+                </div>
+                
+            </div>
+
+            <!-- 图片 -->
+            <div id="pic">
+                <img id="pic" src="image-food/pic.jpg">
+            </div>
+
+            <!-- 精选 -->
+            <div id="foodRec">精选</div>
+            <a href="#">
+                <div id="rec">
+                    <img src="image-food/pic1-1.jpg" id="pic1-1">
+                    <div id="key1">
+                        <p id="food1">海鲜火锅</p>
+                        <p id="text1">所谓海鲜火锅“裸烹”，即是选用上等的海鲜食材入料，品味原汁原味的海鲜火锅，纯天然不添加任何添加剂，如海鲜滑类、以及海鲜原料等，在秋季到来时，品一锅清淡鲜美的海鲜火锅，绝对的极品美味。</p>
+                    
+                    </div>
+                </div>
+            </a>
+
+            <!-- 最热 -->
+            <div id="foodHot">最热</div>
+            <a href="#">
+                <div id="hot">
+                    <img src="image-food/pic2-1.jpg" id="pic2-2">
+                    <div id="key2">
+                        <p id="food2">沙拉</p>
+                        <p id="text2">按照自己的喜好，加入最爱的SUBWAY® 肉类和蔬菜，制作令人垂涎的沙拉。淋上乡村沙拉酱或者低脂意大利酱，一盘新鲜可口的“无悔美食”由此诞生。</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 发现美食 -->
+            <div id="foundFood">发现美食</div>
+            <div id="found">
+                <a href="#">
+                    <div id="found1">
+                    <img src="image-food/pic3-1.jpg" id="pic3-1">
+                    <div id="text3-1">这家正宗的披萨店，超长拉丝，一口就带飞到意大利！</div>
+                    </div>
+                </a>
+                
+                <a href="#">
+                    <div id="found2">
+                    <img src="image-food/pic3-2.jpg" id="pic3-2">
+                    <div id="text3-2">蘸着秘制烤肉汁，一口下去真是太香了，谁能抗拒烤肉的抗拒呢？</div>
+                    </div>
+                </a>
+                
+                <a href="#">
+                    <div id="found3">
+                    <img src="image-food/pic3-3.jpg" id="pic3-3">
+                    <div id="text3-3">寒冷的冬日里喝一碗热气腾腾的滋补靓汤，简直是最美的享受！</div>
+                    </div>
+                </a>
+                
+            </div>
+
+            <!-- 分享美食 -->
+            <div id="shareFood">
+                <img src="image-food/pic4.jpg" id="pic4">
+                <div id="your">
+                    <div id="share">快来分享美食吧！</div>
+                    <div id="text4">心里有光，慢食三餐，料理是一场期待的旅行，跨过山和大海，一路走来，只为遇见你的舌尖。快来和我们一起分享你中意的美食吧，点击下方发送邮件，即可分享快乐，传递美好。</div>
+                    <button id="sharebtn">share</button>
+                </div>
+            </div>
+        </div>
+        <!-- 回到顶部 -->
+        <a href="#"><button id="back">回到顶部</button></a>
+        <!-- 弹幕 -->
+            <div id="fire">简单的食物,本真的生活</div>
+        
+    </div>
+</body>
+<script>
+    var nav = document.getElementById("nav");
+    var list = nav.getElementsByTagName("li")
+    var pic1 = document.getElementById("pic1-1");
+    var pic2 = document.getElementById("pic2-2");
+    var food1 = document.getElementById("food1");
+    var text1 = document.getElementById("text1");
+    var sharebtn = document.getElementById("sharebtn");
+
+    var box1 = document.getElementById("box1");
+    var lbtn = document.getElementById("lbtn");
+    var lclose = document.getElementById("lclose");
+
+    var box2 = document.getElementById("box2");
+    var pbtn = document.getElementById("pbtn");
+    var ensure = document.getElementById("ensure");
+    var pclose = document.getElementById("pclose");
+
+    var data = document.getElementById("data");
+
+    var fire = document.getElementById("fire");
+    var totle = document.getElementById("totle");
+
+
+    //导航获得焦点颜色变化
+    for(var i = 0; i < list.length; i++){
+        list[i].onmouseover = function(){
+            this.style.color = "peru";                 
+        }
+        list[i].onmouseout = function(){
+            this.style.color = "white";
+        }
+    }
+
+    //日期更新
+    var now = new Date();
+    var year = now.getFullYear();
+    var month = now.getMonth();
+    month = month + 1;
+    var nowDate = now.getDate();
+    var currentDay = year + "." + month + "." + nowDate;
+    data.innerHTML = currentDay;
+
+
+    //轮播图
+    var index = 1
+    var picChange1 = setInterval(function(){
+        pic1.setAttribute("src","image-food/pic1-" + index + ".jpg");
+        pic2.setAttribute("src","image-food/pic2-" + index + ".jpg");
+        index = index + 1;
+        if(index == 5){
+            index = 1;
+        }
+    },2000)
+
+
+    //分享按钮获得焦点大小变化
+    sharebtn.onmouseover = function(){
+        this.style.width = "90px";
+        this.style.height = "60px";
+    }
+    sharebtn.onmouseout = function(){
+        this.style.width = "80px";
+        this.style.height = "50px";
+    }
+
+
+    //登录注册框
+    box1.style.display = "none";
+    box2.style.display = "none";
+    
+    lbtn.onclick = function(){
+        box1.style.display = "block";
+        box2.style.display = "none";
+    }
+    lclose.onclick = function(){
+        box1.style.display = "none";
+    }
+    pbtn.onclick = function(){
+        box1.style.display = "none";
+        box2.style.display = "block";
+    }
+    ensure.onclick = function(){
+        box2.style.display = "none";
+    }
+    pclose.onclick = function(){
+        box2.style.display = "none";
+    }
+
+    // 底部弹幕
+    fire.style.marginLeft = "0";
+    var intervalId = setInterval(function(){
+        var marginLeft = parseInt(fire.style.marginLeft);
+        if(fire.style.marginLeft == 1220 + "px"){
+            marginLeft = "0";
+        }
+        fire.style.marginLeft = (marginLeft + 1) + "px";
+    },6)
+    
+
+</script>
+</html>
